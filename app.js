@@ -8,6 +8,14 @@ const mongoose = require('mongoose');
 const flash = require('connect-flash');
 const session = require('express-session');
 const passport = require('passport');
+//var mysql = require('mysql');
+
+
+/*var con = mysql.createConnection({
+    host: "localhost",
+    user: "admin",
+    password: "password"
+  });*/
 
 //load models
 //require('./models/Test');
@@ -32,6 +40,17 @@ const {
     select,
     editIcon
 } = require('./helpers/hbs');
+
+//Nodejs MySQL resource: https://www.w3schools.com/nodejs/nodejs_mysql.asp
+//MySQL connect
+/*con.connect(function(err) {
+  if (err) throw err;
+  console.log("Connected!");
+  con.query(sql, function (err, result) {
+    if (err) throw err;
+    console.log("Result: " + result);
+  });
+});*/
 
 // Mongoose connect
 mongoose.connect(keys.mongoURI, { useNewUrlParser: true })
