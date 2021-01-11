@@ -1,0 +1,24 @@
+{
+    "name": "psy-test",
+    "version": "1.0.0",
+    "description": "Psychology site",
+    "main": "app.js",
+    "scripts": {
+        "start": "node app.js"
+    },
+    "author": "Mihail OLARU",
+    "license": "MIT",
+    "dependencies": {
+        "body-parser": "^1.19.0",
+        "connect-flash": "^0.1.1",
+        "cookie-parser": "^1.4.4",
+        "express": "^4.16.4",
+        "express-handlebars": "^3.0.2",
+        "express-session": "^1.17.0",
+        "method-override": "^3.0.0",
+        "moment": "^2.24.0",
+        "mongoose": "^5.5.5",
+        "passport": "^0.4.0",
+        "passport-google-oauth20": "^2.0.0"
+    }
+}
