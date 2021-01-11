@@ -4,7 +4,7 @@ const exphbs = require('express-handlebars');
 const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
 const mongoose = require('mongoose');
-const cookieParser = require('cookie-parser');
+//const cookieParser = require('cookie-parser');
 const flash = require('connect-flash');
 const session = require('express-session');
 const passport = require('passport');
@@ -18,6 +18,7 @@ require('./config/passport')(passport);
 //Load routes (link them)
 const index = require('./routes/index');
 const auth = require('./routes/auth');
+const admin = require('./routes/admin');
 //const tests = require('./routes/tests');
 
 //load keys
@@ -75,7 +76,7 @@ app.engine('handlebars', exphbs({
 }));
 app.set('view engine', 'handlebars');
 
-app.use(cookieParser());
+//app.use(cookieParser());
 app.use(session({
     secret: 'secret',
     resave: false,
@@ -98,6 +99,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 //Use routes
 app.use('/', index); //everithing that addresses '/auth' will be redirected to 'auth' var
 app.use('/auth', auth);
+app.use('/admin', admin);
+// admin refers to the const we created higher in the text.
+// You can also write the above line like this "app.use(adminBro.options.rootPath, router);"
+// It is the same thing.
 //app.use('/tests', tests);
 
 const port = process.env.PORT || 5000;
