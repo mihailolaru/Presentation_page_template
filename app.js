@@ -19,7 +19,6 @@ const storage = multer.diskStorage({
         A easy way to solve this issue is the time stamp method. filedname refers to the image input filed name from the html file + present date + file extension .jpg .png etc.
         */
         cb(null, file.fieldname +  '-' + Date.now() + path.extname(file.originalname));
-        
     }
 });
 
@@ -32,7 +31,9 @@ const upload = multer({
         //This is a custom function.
         checkFileType(file, cb);
     }
-}).single('myImage'); // Since we upload single files we use single() but wwe could also used [] in case of multiple files upload. myName is the name of the input tag from image upload tag element - <input name="muName" type="file">.
+}).single('myImage'); 
+/* Since we upload single files we use single() but wwe could also used [] in case of multiple files upload. 
+myName is the name of the input tag from image upload tag element - <input name="muName" type="file">. */
 
 function checkFileType(file, cb){
     //27:59
