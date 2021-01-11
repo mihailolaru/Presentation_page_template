@@ -9,8 +9,36 @@ const flash = require('connect-flash');
 const session = require('express-session');
 const passport = require('passport');
 //var mysql = require('mysql');
+//const multer = require('multer');
 
+//Set storage engine
+const storage = multer.diskStorage({
+    destination: './public/imageUploads',
+    filename: function(req, file, cb){
+        /*First should come an error thus we pass null, next is the name of the file. We do not want the original file name in order not to stump on the dublicate file names issue.
+        A easy way to solve this issue is the time stamp method. filedname refers to the image input filed name from the html file + present date + file extension .jpg .png etc.
+        */
+        cb(null, file.fieldname +  '-' + Date.now() + path.extname(file.originalname));
+        
+    }
+});
 
+// Initialize upload variable
+const upload = multer({
+    storage: storage,
+    //storage is the storage var we defined above
+    limits:{fileSize: 1000000}, //file size limit in bytes.
+    fileFilter: function(req, file, cb){
+        //This is a custom function.
+        checkFileType(file, cb);
+    }
+}).single('myImage'); // Since we upload single files we use single() but wwe could also used [] in case of multiple files upload. myName is the name of the input tag from image upload tag element - <input name="muName" type="file">.
+
+function checkFileType(file, cb){
+    //27:59
+}
+
+//SQL DB credentials
 /*var con = mysql.createConnection({
     host: "localhost",
     user: "admin",
@@ -112,11 +140,13 @@ app.use((req, res, next) => {
     next();
 });
 
-//Set static folder __dirname reffers to the current directory
+//Set static folder __dirname refers to the current directory
+//путь, переданный в функцию express.static, указан относительно каталога, из которого запускается процесс node. 
+//В случае запуска приложения Express из другого каталога, безопаснее использовать абсолютный путь к каталогу для предоставления файлов.
 app.use(express.static(path.join(__dirname, 'public')));
 
 //Use routes
-app.use('/', index); //everithing that addresses '/auth' will be redirected to 'auth' var
+app.use('/', index); //everything that addresses '/auth' will be redirected to 'auth' var
 app.use('/auth', auth);
 app.use('/admin', admin);
 // admin refers to the const we created higher in the text.
