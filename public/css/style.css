@@ -18,6 +18,7 @@ body {
     line-height: 3rem;
     color: #6e6e6e;
     margin: 0;
+    overflow: hidden;
 }
 
 html, body {
