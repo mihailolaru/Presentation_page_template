@@ -12,32 +12,32 @@ const passport = require('passport');
 //const multer = require('multer');
 
 //Set storage engine
-const storage = multer.diskStorage({
-    destination: './public/imageUploads',
-    filename: function(req, file, cb){
+//const storage = multer.diskStorage({
+    //destination: './public/imageUploads',
+    //filename: function(req, file, cb){
         /*First should come an error thus we pass null, next is the name of the file. We do not want the original file name in order not to stump on the dublicate file names issue.
         A easy way to solve this issue is the time stamp method. filedname refers to the image input filed name from the html file + present date + file extension .jpg .png etc.
         */
-        cb(null, file.fieldname +  '-' + Date.now() + path.extname(file.originalname));
-    }
-});
+        //cb(null, file.fieldname +  '-' + Date.now() + path.extname(file.originalname));
+    //}
+//});
 
 // Initialize upload variable
-const upload = multer({
-    storage: storage,
+//const upload = multer({
+    //storage: storage,
     //storage is the storage var we defined above
-    limits:{fileSize: 1000000}, //file size limit in bytes.
-    fileFilter: function(req, file, cb){
+    //limits:{fileSize: 1000000}, //file size limit in bytes.
+    //fileFilter: function(req, file, cb){
         //This is a custom function.
-        checkFileType(file, cb);
-    }
-}).single('myImage'); 
+        //checkFileType(file, cb);
+    //}
+//}).single('myImage'); 
 /* Since we upload single files we use single() but wwe could also used [] in case of multiple files upload. 
 myName is the name of the input tag from image upload tag element - <input name="muName" type="file">. */
 
-function checkFileType(file, cb){
+//function checkFileType(file, cb){
     //27:59
-}
+//}
 
 //SQL DB credentials
 /*var con = mysql.createConnection({
@@ -68,7 +68,7 @@ const {
     formatDate,
     select,
     editIcon
-} = require('./helpers/hbs');
+} = require('./helpers/handleBarsHelp');
 
 //Nodejs MySQL resource: https://www.w3schools.com/nodejs/nodejs_mysql.asp
 //MySQL connect
@@ -141,9 +141,9 @@ app.use((req, res, next) => {
     next();
 });
 
-//Set static folder __dirname refers to the current directory
-//путь, переданный в функцию express.static, указан относительно каталога, из которого запускается процесс node. 
-//В случае запуска приложения Express из другого каталога, безопаснее использовать абсолютный путь к каталогу для предоставления файлов.
+/*__dirname is a global variable that contains the path to your root directory and in this case
+ we are joining it with the public folder that we created. Now in the page structure files we can
+ access files from this folder (<img src="/img/logo.png"> So, we do not need to write "public" before '/' */
 app.use(express.static(path.join(__dirname, 'public')));
 
 //Use routes
