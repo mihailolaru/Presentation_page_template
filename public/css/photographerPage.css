@@ -1,0 +1,28 @@
+.container {
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 40px auto 40px;
+    grid-template-areas: 
+        "h h h"
+        "c c c"
+        "f f f";
+}
+
+.header {
+    grid-area: h;
+}
+
+.content {
+    grid-area: c;
+}
+
+.footer {
+    grid-area: f;
+}
+
+.container > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

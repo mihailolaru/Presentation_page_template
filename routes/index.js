@@ -16,9 +16,6 @@ router.get('/photographer', ensureGuest, (req, res) => {
     res.render('general_body_components/photographer/photographer');
 });
 
-router.get('/about', (req, res) => {
-    res.render('general_body_components/about');
-});
 
 //route for files uploading
 //router.post('/upload', (req. res) => {
