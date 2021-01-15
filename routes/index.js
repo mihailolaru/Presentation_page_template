@@ -14,6 +14,7 @@ router.get('/webDev', ensureGuest, (req, res) => {
 
 router.get('/photographer', ensureGuest, (req, res) => {
     res.render('general_body_components/photographer/photographer');
+    //get answer form DB with the photos
 });
 
 

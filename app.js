@@ -85,6 +85,7 @@ const {
 mongoose.connect(keys.mongoURI, { useNewUrlParser: true })
     .then(() => console.log('MongoDB connected'))
     .catch(err => console.log(err));
+    
 const app = express();
 
 //body-parser middleware
@@ -122,6 +123,7 @@ app.engine('handlebars', exphbs({
     },
     defaultLayout: 'main'
 }));
+
 app.set('view engine', 'handlebars');
 
 //app.use(cookieParser());
@@ -131,7 +133,7 @@ app.use(session({
     saveUninitialized: false
 }));
 
-//Passport middleware. It is important to place this after the express session middleware!!!
+//Passport middleware. It is IMPORTANT to place this after the express session middleware!!!
 app.use(passport.initialize());
 app.use(passport.session());
 
