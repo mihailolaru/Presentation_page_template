@@ -1,25 +1,35 @@
-..grid-container {
+.grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     gap: 5px 5px;
     grid-template-areas:
-      "image image image image image image image image image"
-      "about about content content content content content content content"
-      "about about content content content content content content content"
-      "someinfo someinfo content content content content content content content"
-      "someinfo someinfo content content content content content content content"
-      "someinfo someinfo content content content content content content content"
-      "footer footer footer footer footer footer footer footer footer";
+      "i i i i i i i i i"
+      "a a c c c c c c c"
+      "a a c c c c c c c"
+      "s s c c c c c c c"
+      "s s c c c c c c c"
+      "s s c c c c c c c"
+      "f f f f f f f f f";
   }
   
-  .image { grid-area: image; }
+  .image { 
+    grid-area: i; 
+  }
   
-  .about { grid-area: about; }
+  .about { 
+    grid-area: a; 
+  }
   
-  .content { grid-area: content; }
+  .content { 
+    grid-area: c; 
+  }
   
-  .footer { grid-area: footer; }
+  .footer { 
+    grid-area: f; 
+  }
   
-  .someinfo { grid-area: someinfo; }
+  .someinfo { 
+    grid-area: s; 
+  }
   
