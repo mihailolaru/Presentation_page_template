@@ -11,18 +11,17 @@ html {
 body {
     display: flex;
     min-height: 100vh;
-    flex-direction: column;
+    /*flex-direction: row;*/
     background: #151515;
     font-family: "lora-regular", serif;
     font-size: 1.7rem;
     line-height: 3rem;
     color: #6e6e6e;
     margin: 0;
-    overflow: hidden;
-}
+}    
 
 html, body {
-    box-sizing: border-box;
+    /*box-sizing: border-box;*/
     height: 100%;
     margin: 0%;
 
@@ -46,7 +45,7 @@ html, body {
     }
 }
 
-progress {
+/*progress {
     display: inline-block;
     vertical-align: baseline;
 }
@@ -507,3 +506,4 @@ input, textarea, select, pre, blockquote, table, p, ul, ol, dl{
 .contact-info h5 {
     color: #FF0077;
 }
+*/

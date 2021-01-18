@@ -1,17 +1,13 @@
 <div class="container">
 
-    <div class="about">
-        <img src="images/photoPageBG.jpg" alt="Profile Picture">
-
-        <div class="about-content">
+    <div class="image">
+            <img id="PBGI" src="images/photoPageBG.jpg" alt="Profile Picture">
+    </div>
+    
+    <div class="about about-content">
             <h3>Profile</h3>
             <div class="intro-info">
-
                 <img id="BG_image" src="images/Mypicture.jpg" alt="My picture">
-
-                <p class="lead">Lorem ipsum Exercitation culpa qui dolor consequat exercitation fugiat laborum ex ea
-                    eiusmod ad do aliqua occaecat nisi ad irure sunt id pariatur Duis laboris amet exercitation veniam
-                    labore consectetur ea id quis eiusmod.</p>
             </div>
 
             <ul class="info-list">
@@ -38,47 +34,22 @@
 
             </ul>
             <!-- /info-list -->
-        </div>
-
-
     </div>
 
-    <div class="content grey-section">
+    <div class="content ">
         {{> _photoGallery}}
     </div>
 
     <div class="footer">
-
-        <div class="contact-info">
-
-            <div class="email">
-
-                <div class="icon">
-                    <i class="icon-mail"></i>
-                </div>
-
-                <h5>Email Me At</h5>
-
-                <p>someone@kardswebsite.com<br> info@kardswebsite.com
-                </p>
-
-            </div>
-
-            <div class="telephone-number">
-
-                <div class="icon">
-                    <i class="icon-phone"></i>
-                </div>
-
-                <h5>Call Me At</h5>
-
-                <p>Mobile: (+373) 60255007</p>
-
-            </div>
-
-        </div>
-        <!-- /contact-info -->
-
+        {{> _footer}}
     </div>
 
+</div>
+
+<div class="grid-container">
+  <div class="image"></div>
+  <div class="about"></div>
+  <div class="content"></div>
+  <div class="footer"></div>
+  <div class="someinfo"></div>
 </div>
