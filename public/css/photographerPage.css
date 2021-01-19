@@ -1,35 +1,49 @@
 .grid-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: auto 30% 45% auto; 
+    grid-template-rows: 20% auto auto 20%; 
     gap: 5px 5px;
+    min-height: 0;  
+    min-width: 0; 
     grid-template-areas:
-      "i i i i i i i i i"
-      "a a c c c c c c c"
-      "a a c c c c c c c"
-      "s s c c c c c c c"
-      "s s c c c c c c c"
-      "s s c c c c c c c"
-      "f f f f f f f f f";
+      "eml i i emr."
+      "eml a c emr."
+      "eml a c emr."
+      "eml f f emr.";
+      
   }
   
+  .empty-left {
+    grid-area: eml;
+    background-color: antiquewhite;
+  }
+
+  .empty-right{
+    grid-area: emr;
+    background-color: darkcyan;
+  }
+
   .image { 
-    grid-area: i; 
+    grid-area: i;
+    background-color: blue; 
   }
   
   .about { 
     grid-area: a; 
+    background-color: rgb(32, 64, 134);
   }
   
   .content { 
     grid-area: c; 
+    background-color: rgb(28, 221, 60);
   }
   
   .footer { 
     grid-area: f; 
+    background-color: rgb(194, 105, 46);
   }
   
-  .someinfo { 
-    grid-area: s; 
+  #PBGI{
+    max-width: 100%;
+
   }
-  

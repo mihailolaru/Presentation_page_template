@@ -9,8 +9,8 @@ html {
 }
 
 body {
-    display: flex;
-    min-height: 100vh;
+    display: grid;
+    
     /*flex-direction: row;*/
     background: #151515;
     font-family: "lora-regular", serif;
@@ -18,15 +18,18 @@ body {
     line-height: 3rem;
     color: #6e6e6e;
     margin: 0;
+    
 }    
 
 html, body {
-    /*box-sizing: border-box;*/
     height: 100%;
     margin: 0%;
-
 }
  
+#my_picture{
+    border-radius: 50%;
+}
+
 @media only screen and (max-width:1024px) {
     html {
         font-size: 9.411764705882353px;
@@ -45,7 +48,7 @@ html, body {
     }
 }
 
-/*progress {
+progress {
     display: inline-block;
     vertical-align: baseline;
 }
