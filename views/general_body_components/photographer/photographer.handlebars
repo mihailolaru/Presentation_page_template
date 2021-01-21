@@ -1,10 +1,12 @@
-<!-- Header Showcase -->
+<!-- Header -->
 <header id="showcase" class="grid">
     <div class="bg-image"></div>
     <div class="content-wrap">
-      <h1>Welcome to Acme Web Solutions</h1>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci eum error earum soluta voluptatum nisi laboriosam eos saepe asperiores dolorum.</p>
-      <a href="#section-b" class="btn">Read More</a>
+      <h1>Welcome to my photography page</h1>
+      <div>
+        <p>“If you want to be a better photographer, stand in front of more interesting stuff.”</p>
+        <p id="author">Jim Richardson</p>
+      </div>
     </div>
   </header>
   
@@ -13,171 +15,31 @@
     <!-- Section A -->
     <section id="section-a" class="grid">
       <div class="content-wrap">
-        <h2 class="content-title">Web & Application Development</h2>
+        <h2 class="content-title">Photography & Photo editing</h2>
         <div class="content-text">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe sint eligendi possimus? Unde officiis magnam laborum ipsa distinctio odio, vero dolores dicta aliquam aperiam repellendus. Perferendis officiis deserunt velit voluptas nobis sequi
-            animi totam, accusantium, ex eius quia, natus quo?</p>
+          <p>I have been taking photographs for more than 3 years now. I use Canon cameras with a variety of lenses of the same brand.<br> I do all types of photography depending on my mood and muse. Also, a like to do composite photos. So, please enjoy!</p>
         </div>
       </div>
     </section>
     <!-- END Biography -->
 
-    <!-- Portfolio -->
-    <section id="section-b" class="grid">
-      <ul>
-        <li>
-          <div class="card">
-            <img src="https://static.pexels.com/photos/574077/pexels-photo-574077.jpeg" alt="">
-            <div class="card-content">
-              <h3 class="card-title">Web Development</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum culpa neque quo eum et quasi velit voluptatum cum maiores exercitationem.</p>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="card">
-            <img src="https://static.pexels.com/photos/261628/pexels-photo-261628.jpeg" alt="">
-            <div class="card-content">
-              <h3 class="card-title">Mobile Applications</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum culpa neque quo eum et quasi velit voluptatum cum maiores exercitationem.</p>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="card">
-            <img src="https://static.pexels.com/photos/265087/pexels-photo-265087.jpeg" alt="">
-            <div class="card-content">
-              <h3 class="card-title">Tech Marketing</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum culpa neque quo eum et quasi velit voluptatum cum maiores exercitationem.</p>
-            </div>
-          </div>
-        </li>
-      </ul>
+        <!-- Portfolio -->
+    <section id="section-PhotoGallery" class="grid">
+      {{> _photoGallery}}
     </section>
     <!-- END Portfolio -->
 
-    <!-- Section C -->
-    <section id="section-c" class="grid">
+    <!-- Photo sell -->
+    <section id="section-photoSell" class="grid">
       <div class="content-wrap">
-        <h2 class="content-title">We handle all of your digital needs</h2>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime nam rerum vel earum error fugiat cupiditate, dolore eius! Minus, explicabo.</p>
+        <h2 class="content-title">Photos selling</h2>
+        <p>If you are interested in buying any of the photos displayed here you can contact me on my social account or mail or you can visit the following pages:</p>
+        <a href="https://www.shutterstock.com/g/Mihail+OLARU?rid=3621245&utm_medium=email&utm_source=ctrbreferral-link">
+          <img id="shutterStockLogo"src="images/SHUTTERSTOCK-logo.png" alt="logo">
+        </a>
       </div>
     </section>
   
-    <!-- Contacts -->
-    <section id="section-d" class="grid">
-      <div class="box">
-        <h2 class="content-title">Contact Us</h2>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum, suscipit. Rerum ducimus a quod, ut et voluptas obcaecati unde fuga.</p>
-        <p>contact@acmewebsolutions.test</p>
-      </div>
-      <div class="box">
-        <h2 class="content-title">About Our Company</h2>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio earum porro deserunt, deleniti, quae facere repudiandae, officiis est exercitationem nobis iusto doloremque! Soluta excepturi in aut suscipit amet temporibus quo?</p>
-      </div>
-    </section>
-    <!-- END contacts -->
+    {{> _footer}}
     
   </main>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="grid-container">
-    <div class="empty-left">
-       <h1>Empty right</h1> 
-    </div>
-
-    <header class="image" id="showcase">
-        <div class="bg-image"></div>
-        <div class="content-wrap">
-            <h1>Welcome to Acme Web Solutions</h1>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci eum error earum soluta voluptatum nisi laboriosam eos saepe asperiores dolorum.</p>
-            <a href="#section-b" class="btn">Read More</a>
-        </div>
-    </header>
-    <div id="about" class="about about-content">
-        
-        <h3>Profile</h3>
-        <div class="intro-info">
-            <img id="BG_image" src="images/Mypicture.jpg" alt="My picture">
-            
-        </div>
-
-        <ul class="info-list">
-            <li>
-                <strong>Fullname:</strong>
-                <span>Mihail OLARU</span>
-            </li>
-            <li>
-                <strong>Birth Date:</strong>
-                <span>July 4, 1983</span>
-            </li>
-            <li>
-                <strong>Job:</strong>
-                <span>Photographer</span>
-            </li>
-            <li>
-                <strong>Social profile:</strong>
-                <span>https://500px.com/p/mihai_olaru?view=photos/span>
-            </li>
-            <li>
-                <strong>Email:</strong>
-                <span>mihaiobusiness@gmail.com</span>
-            </li>
-
-        </ul>
-       
-    </div>
-
-    <div class="content ">
-        <h1>Content</h1>
-        <!--
-        {{> _photoGallery}}
-        -->
-    </div>
-
-    <div class="footer">
-        <h1>Footer</h1>
-        <!--
-        {{> _footer}}
-        -->
-    </div>
-
-    <div class="empty-right">
-        <h1>Left empty</h1>
-    </div>
-
-</div>

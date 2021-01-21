@@ -42,8 +42,7 @@ p {
 #showcase .bg-image {
   position: absolute;
   background: #333
-    url("https://static.pexels.com/photos/248515/pexels-photo-248515.png");
-  background-position: center;
+    url("https://drive.google.com/thumbnail?id=1JmNaZwDbnIBaOmEMqjxVKM-OmVam-nkI");
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -70,19 +69,19 @@ p {
   padding-bottom: 2em;
 }
 
-/* Section B */
+/* section-PhotoGallery */
 
-#section-b {
+#section-PhotoGallery {
   padding: 2em 1em 1em;
 }
 
-#section-b ul {
+#section-PhotoGallery ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-#section-b li {
+#section-PhotoGallery li {
   margin-bottom: 1em;
   background: #fff;
   color: #333;
@@ -92,9 +91,13 @@ p {
   padding: 1.5em;
 }
 
-/* Section C */
+/* photoSell */
 
-#section-c {
+#shutterStockLogo{
+  width: 100px;
+}
+
+#section-photoSell {
   background: #fff;
   color: #333;
   padding: 2em;
@@ -102,25 +105,30 @@ p {
 
 /* Section D / Boxes */
 
-#section-d .box {
+#contacts .box {
   padding: 2em;
   color: #fff;
 }
 
 #section-d .box:first-child {
-  background: #2690d4;
+  background: #333;
 }
 
 /* Footer */
+#author{
+  float: right;
+  padding-right: 6em;
+}
 
-#main-footer {
+#copyright {
   padding: 2em;
   background: #000;
   color: #fff;
   text-align: center;
+  justify-content: center;
 }
 
-#main-footer a {
+#copyright a {
   color: #2690d4;
   text-decoration: none;
 }
@@ -133,26 +141,21 @@ p {
     grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
   }
 
-  #section-a .content-text {
-    columns: 2;
-    column-gap: 2em;
-  }
-
   #section-a .content-text p {
     padding-top: 0;
   }
 
   .content-wrap,
-  #section-b ul {
+  #section-PhotoGallery ul {
     grid-column: 2/4;
   }
 
   .box,
-  #main-footer div {
+  #copyright div {
     grid-column: span 2;
   }
 
-  #section-b ul {
+  #section-PhotoGallery ul {
     display: flex;
     justify-content: space-around;
   }
