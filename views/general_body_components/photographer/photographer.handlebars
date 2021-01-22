@@ -1,45 +1,48 @@
 <!-- Header -->
 <header id="showcase" class="grid">
-    <div class="bg-image"></div>
+  <div class="bg-image"></div>
+  <div class="content-wrap">
+    <h1>Welcome to my photography page</h1>
+    <div>
+      <p>“If you want to be a better photographer, stand in front of more interesting stuff.”</p>
+      <p id="author">Jim Richardson</p>
+    </div>
+  </div>
+</header>
+
+<!-- Biography -->
+<main id="main">
+  <!-- Section A -->
+  <section id="section-a" class="grid">
     <div class="content-wrap">
-      <h1>Welcome to my photography page</h1>
-      <div>
-        <p>“If you want to be a better photographer, stand in front of more interesting stuff.”</p>
-        <p id="author">Jim Richardson</p>
+      <h2 class="content-title">Photography & Photo editing</h2>
+      <div class="content-text">
+        <p>I have been taking photographs for more than 3 years now. I use Canon cameras with a variety of lenses of the
+          same brand.<br> I do all types of photography depending on my mood and muse. Also, a like to do composite
+          photos. So, please enjoy!</p>
       </div>
     </div>
-  </header>
-  
-  <!-- Biography -->
-  <main id="main">
-    <!-- Section A -->
-    <section id="section-a" class="grid">
-      <div class="content-wrap">
-        <h2 class="content-title">Photography & Photo editing</h2>
-        <div class="content-text">
-          <p>I have been taking photographs for more than 3 years now. I use Canon cameras with a variety of lenses of the same brand.<br> I do all types of photography depending on my mood and muse. Also, a like to do composite photos. So, please enjoy!</p>
-        </div>
-      </div>
-    </section>
-    <!-- END Biography -->
+  </section>
+  <!-- END Biography -->
 
-        <!-- Portfolio -->
-    <section id="section-PhotoGallery" class="grid">
-      {{> _photoGallery}}
-    </section>
-    <!-- END Portfolio -->
+  <!-- Portfolio -->
+  <section id="section-PhotoGallery" class="grid">
+    {{> _photoGallery}}
+  </section>
+  <!-- END Portfolio -->
 
-    <!-- Photo sell -->
-    <section id="section-photoSell" class="grid">
-      <div class="content-wrap">
-        <h2 class="content-title">Photos selling</h2>
-        <p>If you are interested in buying any of the photos displayed here you can contact me on my social account or mail or you can visit the following pages:</p>
-        <a href="https://www.shutterstock.com/g/Mihail+OLARU?rid=3621245&utm_medium=email&utm_source=ctrbreferral-link">
-          <img id="shutterStockLogo"src="images/SHUTTERSTOCK-logo.png" alt="logo">
-        </a>
-      </div>
-    </section>
-  
-    {{> _footer}}
-    
-  </main>
+  <!-- Photo sell -->
+  <section id="section-photoSell" class="grid">
+    <div class="content-wrap photoContent">
+      <h2 class="content-title">Photos selling</h2>
+      <p>If you are interested in buying any of the photos displayed here you can contact me on my social account or
+        mail or you can visit:</p>
+      <a href="https://www.shutterstock.com/g/Mihail+OLARU?rid=3621245&utm_medium=email&utm_source=ctrbreferral-link">
+        <img id="shutterStockLogo" src="images/SHUTTERSTOCK-logo.png" alt="logo">
+      </a>
+    </div>
+  </section>
+
+  {{> _footer}}
+
+</main>

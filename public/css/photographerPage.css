@@ -12,7 +12,7 @@ h3 {
 }
 
 p {
-  margin: 0;
+  margin: 0;content-wrap
   padding: 1em 0;
 }
 
@@ -103,6 +103,10 @@ p {
   padding: 2em;
 }
 
+.photoContent{
+  display: inline-block;
+  
+}
 /* Section D / Boxes */
 
 #contacts .box {
