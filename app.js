@@ -1,4 +1,4 @@
-import React from 'react';
+//import React from 'react';
 import ReactDOM from 'react-dom';
 const express = require('express');
 const path = require('path');
@@ -12,7 +12,12 @@ const session = require('express-session');
 const passport = require('passport');
 //var mysql = require('mysql');
 //const multer = require('multer');
-import homeButton from './views/react_components/homeButton';
+
+//import homeButton from './views/react_components/homeButton';
+
+
+ReactDOM.render("<div>Hello from React!</div>", document.getElementById('home_button_container'));
+
 
 //Set storage engine
 //const storage = multer.diskStorage({
@@ -166,4 +171,3 @@ app.listen(port, () => {
     console.log(`Server started on port ${port}`);
 });
 
-ReactDOM.render(<homeButton/>, document.getElementById('home_button_container'));
