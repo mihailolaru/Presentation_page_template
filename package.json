@@ -48,5 +48,6 @@
   },
   "homepage": "https://github.com/ghermidont/MyPresentationPage#readme",
   "devDependencies": {},
-  "keywords": []
+  "keywords": [],
+  "type": "module"
 }
