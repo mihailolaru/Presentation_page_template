@@ -20,3 +20,7 @@ https://grid.malven.co/
 https://fontawesome.com/icons/facebook?style=brands
 
 https://bezkoder.com/integrate-react-express-same-server-port/
+
+https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS
+
+https://www.yougetsignal.com/tools/open-ports/

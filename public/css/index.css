@@ -7,7 +7,7 @@ html {
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background: #333;
+    background: #333 !important;
     color: #fff;
     font-size: 1.1em;
     line-height: 1.5;

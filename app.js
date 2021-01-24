@@ -10,6 +10,7 @@ const session = require('express-session');
 const passport = require('passport');
 //var mysql = require('mysql');
 //const multer = require('multer');
+import homeButton from './views/react_components/homeButton';
 
 //Set storage engine
 //const storage = multer.diskStorage({
@@ -162,3 +163,5 @@ const port = process.env.PORT || 5000;
 app.listen(port, () => {
     console.log(`Server started on port ${port}`);
 });
+
+ReactDOM.render(<homeButton/>, document.getElementById('home_button_container'));
