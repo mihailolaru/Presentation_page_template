@@ -17,7 +17,6 @@ router.get('/photographer', ensureGuest, (req, res) => {
     //get answer form DB with the photos
 });
 
-
 //route for files uploading
 //router.post('/upload', (req. res) => {
     //Here we are calling the upload function we defined in the app.js file.

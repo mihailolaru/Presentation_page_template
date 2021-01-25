@@ -24,3 +24,7 @@ https://bezkoder.com/integrate-react-express-same-server-port/
 https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS
 
 https://www.yougetsignal.com/tools/open-ports/
+
+script example:
+"start": "node app.js",
+

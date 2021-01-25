@@ -1,5 +1,3 @@
-//import React from 'react';
-import ReactDOM from 'react-dom';
 const express = require('express');
 const path = require('path');
 const exphbs = require('express-handlebars');
@@ -12,12 +10,6 @@ const session = require('express-session');
 const passport = require('passport');
 //var mysql = require('mysql');
 //const multer = require('multer');
-
-//import homeButton from './views/react_components/homeButton';
-
-
-ReactDOM.render("<div>Hello from React!</div>", document.getElementById('home_button_container'));
-
 
 //Set storage engine
 //const storage = multer.diskStorage({
