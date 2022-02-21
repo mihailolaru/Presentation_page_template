@@ -19,7 +19,7 @@
         "express-formidable": "^1.2.0",
         "express-handlebars": "^3.0.2",
         "express-session": "^1.17.1",
-        "handlebars": "^4.7.6",
+        "handlebars": "^4.7.7",
         "method-override": "^3.0.0",
         "moment": "^2.24.0",
         "mongoose": "^5.11.11",

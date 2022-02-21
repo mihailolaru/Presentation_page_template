@@ -37,6 +37,7 @@ const {
 mongoose.connect(keys.mongoURI, { useNewUrlParser: true })
     .then(() => console.log('MongoDB connected'))
     .catch(err => console.log(err));
+
 const app = express();
 
 //body-parser middleware
@@ -74,6 +75,7 @@ app.engine('handlebars', exphbs({
     },
     defaultLayout: 'main'
 }));
+
 app.set('view engine', 'handlebars');
 
 //app.use(cookieParser());
@@ -97,7 +99,7 @@ app.use((req, res, next) => {
 app.use(express.static(path.join(__dirname, 'public')));
 
 //Use routes
-app.use('/', index); //everithing that addresses '/auth' will be redirected to 'auth' var
+app.use('/', index); //everything that addresses '/auth' will be redirected to 'auth' var
 app.use('/auth', auth);
 app.use('/admin', admin);
 // admin refers to the const we created higher in the text.
