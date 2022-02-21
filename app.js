@@ -18,7 +18,6 @@ require('./config/passport')(passport);
 //Load routes (link them)
 const index = require('./routes/index');
 const auth = require('./routes/auth');
-const admin = require('./routes/admin');
 //const tests = require('./routes/tests');
 
 //load keys
@@ -95,13 +94,13 @@ app.use((req, res, next) => {
     next();
 });
 
-//Set static folder __dirname reffers to the current directory
+//Set static folder __dirname refers to the current directory
 app.use(express.static(path.join(__dirname, 'public')));
 
 //Use routes
 app.use('/', index); //everything that addresses '/auth' will be redirected to 'auth' var
 app.use('/auth', auth);
-app.use('/admin', admin);
+
 // admin refers to the const we created higher in the text.
 // You can also write the above line like this "app.use(adminBro.options.rootPath, router);"
 // It is the same thing.

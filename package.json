@@ -9,9 +9,6 @@
     "author": "Mihail OLARU",
     "license": "MIT",
     "dependencies": {
-        "@admin-bro/express": "^3.0.1",
-        "admin-bro": "^1.6.6",
-        "admin-bro-mongoose": "^0.4.0",
         "body-parser": "^1.19.0",
         "connect-flash": "^0.1.1",
         "cookie-parser": "^1.4.5",
